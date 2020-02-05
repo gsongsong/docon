@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "docon", "docon\docon.csproj", "{7D335814-4C97-43EE-B1E6-8C67C9E884B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D335814-4C97-43EE-B1E6-8C67C9E884B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D335814-4C97-43EE-B1E6-8C67C9E884B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D335814-4C97-43EE-B1E6-8C67C9E884B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D335814-4C97-43EE-B1E6-8C67C9E884B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4D9523C-99F8-4CB4-9EF3-AF7B6A3A7E2E}
+	EndGlobalSection
+EndGlobal
