@@ -22,7 +22,7 @@ namespace docon
       var currentDirectory = Directory.GetCurrentDirectory();
       var outputFile = Path.Combine(currentDirectory, nameWoExt + "." + outputFormat);
       var wordApp = new Word.Application();
-      var doc = wordApp.Documents.Open(inputFile);
+      var doc = wordApp.Documents.Open(Path.Combine(currentDirectory, inputFile));
       var format = outputFormat == FormatTxt ? WdSaveFormat.wdFormatText : WdSaveFormat.wdFormatFilteredHTML;
       doc.SaveAs2(outputFile, format, Encoding: EncodingUtf8);
       doc.Close();
