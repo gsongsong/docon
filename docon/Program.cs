@@ -23,6 +23,7 @@ namespace docon
       var outputFile = Path.Combine(currentDirectory, nameWoExt + "." + outputFormat);
       var wordApp = new Word.Application();
       var doc = wordApp.Documents.Open(Path.Combine(currentDirectory, inputFile));
+      ConvertArrowToUnicode(doc);
       var format = outputFormat == FormatTxt ? WdSaveFormat.wdFormatText : WdSaveFormat.wdFormatFilteredHTML;
       doc.SaveAs2(outputFile, format, Encoding: EncodingUtf8);
       doc.Close();
@@ -54,6 +55,13 @@ namespace docon
         Console.WriteLine("Output format must be either \"txt\" or \"htm\"");
         Environment.Exit(-1);
       }
+    }
+
+    static void ConvertArrowToUnicode(Document doc)
+    {
+      var from = ((char)0xF0AE).ToString();
+      var to = ((char)0x2192).ToString();
+      doc.Content.Find.Execute(from, ReplaceWith: to, Replace: WdReplace.wdReplaceAll);
     }
   }
 }
